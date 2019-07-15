@@ -272,6 +272,12 @@ type SplitLineOpts struct {
 	LineStyle LineStyleOpts `json:"lineStyle,omitempty"`
 }
 
+type AxisLabel struct {
+	Rotate   int `json:"rotate"`
+	Margin   int `json:"margin"`
+	FontSize int `json:"fontSize"`
+}
+
 // XAxisOpts is the option set for X axis.
 type XAxisOpts struct {
 	// X 轴名称
@@ -309,6 +315,8 @@ type XAxisOpts struct {
 	SplitArea SplitAreaOpts `json:"splitArea,omitempty"`
 	// X 轴在 grid 区域中的分隔线配置项
 	SplitLine SplitLineOpts `json:"splitLine,,omitempty"`
+
+	AxisLabel AxisLabel `json:"axisLabel,omitempty"`
 }
 
 func (XAxisOpts) markGlobal() {}

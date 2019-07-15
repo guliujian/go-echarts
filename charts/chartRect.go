@@ -33,6 +33,12 @@ func (xy *XYAxis) setXYGlobalOptions(options ...globalOptser) {
 	}
 }
 
+func (xy *XYAxis) AddXAxisOptions(xAxis ...XAxisOpts) {
+	for i := 0; i < len(xAxis); i++ {
+		xy.XAxisOptsList = append(xy.XAxisOptsList, xAxis[i])
+	}
+}
+
 // ExtendXAxis adds new X axes.
 func (xy *XYAxis) ExtendXAxis(xAxis ...XAxisOpts) {
 	for i := 0; i < len(xAxis); i++ {

@@ -1,8 +1,9 @@
 package charts
 
 import (
-	"github.com/chenjiandongx/go-echarts/datatypes"
 	"regexp"
+
+	"github.com/chenjiandongx/go-echarts/datatypes"
 )
 
 type globalOptser interface {
